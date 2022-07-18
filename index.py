@@ -9,4 +9,4 @@ with app.app_context():
 
 if __name__ == "__main__":
     # DEBUG is SET to TRUE. CHANGE FOR PROD
-    app.run(debug=True)
+    app.run(port=500, debug=False)
