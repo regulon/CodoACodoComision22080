@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+{% include 'partials/_message.html' %}
+
+<div class="row">
+    <div class="col-md-5">
+        {% include 'partials/_empleadoForm.html' %}
+    </div>
+    <div class="col-md-7">
+        {% for empleado in empleados  %}
+        <div class="card mb-1 text-white bg-dark">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <h5>{{empleado.nombre}}</h5>
+                    <div>
+                        <a href="{{url_for('empleados.actualizar', id = empleado.id)}}" class="btn bg-black btn-sm rounded-0 text-white">Modificar</a>
+                        <a href="{{url_for('empleados.eliminar', id = empleado.id)}}" class="btn btn-danger btn-sm rounded-0">Eliminar</a>
+                    </div>
+                </div>
+                <p>{{empleado.apellido}}</p>
+                <p>{{empleado.dni}}</p>
+                <p>{{empleado.correo}}</p>
+                <p>{{empleado.foto}}</p>
+            </div>
+        </div>    
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock body %}
+
+
+
+
+
+
+   

@@ -1,0 +1,12 @@
+body{
+    background-color: #121212;
+}
+.bg-black{
+    background-color: #090909;
+}
+.bg-grey{
+    background-color: rgb(99, 97, 97);
+}
+.text-bold{
+    font-weight: bolder;
+}

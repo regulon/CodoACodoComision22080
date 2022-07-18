@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col-md-4 offset-md-0 bg-dark">
+        <form action="/actualizar/{{empleado.id}}" method="POST" class=" text-white">
+            <div class="mb-3">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre", value="{{empleado.nombre}}" class="form-control rounded-3 bg-grey border-0 text-black"/>
+            </div>
+            <hr>
+            <div>
+                <label for="apellido">Apellido: </label>
+                <input type="text" name="apellido", value="{{empleado.apellido}}" class="form-control rounded-3 bg-grey border-0 text-black"/>
+            </div>
+            <hr>
+            <div>
+                <label for="dni">DNI: </label>
+                <input type="text" name="dni", value="{{empleado.dni}}" class="form-control rounded-3 bg-grey border-0 text-black"/>
+            </div>
+            <hr>
+            <div>
+                <label for="correo">Correo: </label>
+                <input type="text" name="correo", value="{{empleado.correo}}" class="form-control rounded-3 bg-grey border-0 text-black"/>
+            </div>
+            <hr>
+            <div>
+                <label for="foto">Foto: </label>
+                <input type="text" name="foto", value="{{empleado.foto}}" class="form-control rounded-3 bg-grey border-0 text-black"/>
+            </div>
+            <hr>
+            <br>
+            <div>
+                <button class="btn btn-primary">Modificar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock body %}
